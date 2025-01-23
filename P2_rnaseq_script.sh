@@ -1,0 +1,24 @@
+#!/bin/bash
+
+SourceDir="/data/class/ecoevo283/public/Bioinformatics_Course/RNAseq"
+DestDir="/path/to/your/destination/directory"
+File="${SourceDir}/RNAseq384_SampleCoding.txt"
+
+mkdir -p "$DestDir"
+
+tail -n +2 "$File" | while read -r line; do
+    multiplex_index=$(echo "$line" | cut -f2 -d" ") 
+    full_sample_name=$(echo "$line" | cut -f12 -d" ")
+
+    READ1=$(find "$SourceDir" -type f -iname "*${multiplex_index}_R1.fq.gz")
+    READ2=$(find "$SourceDir" -type f -iname "*${multiplex_index}_R2.fq.gz")
+
+    if [[ -n $READ1 ]]; then
+        ln -s "$READ1" "${DestDir}/${full_sample_name}_R1.fq.gz"
+    fi
+    if [[ -n $READ2 ]]; then
+        ln -s "$READ2" "${DestDir}/${full_sample_name}_R2.fq.gz"
+    fi
+
+    echo "Sample: $full_sample_name, Created symlinks for R1 and R2"
+done
