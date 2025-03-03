@@ -1,0 +1,6 @@
+plot_filtered_snps.py:10: UserWarning: loadtxt: Empty input file: "/pub/minchiy/EE283/Week5/SNPs/X_1Mb_filtered.012"
+  geno_data = np.loadtxt(genotype_file, dtype=int)[:, 1:]  # 移除第一列索引
+Traceback (most recent call last):
+  File "plot_filtered_snps.py", line 10, in <module>
+    geno_data = np.loadtxt(genotype_file, dtype=int)[:, 1:]  # 移除第一列索引
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed

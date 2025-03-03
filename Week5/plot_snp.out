@@ -1,0 +1,9 @@
+ERROR: Unable to locate a modulefile for 'python/3.8'
+Requirement already satisfied: matplotlib in /data/homezvol1/minchiy/.local/lib/python3.6/site-packages
+Requirement already satisfied: numpy in /data/homezvol1/minchiy/.local/lib/python3.6/site-packages
+Requirement already satisfied: cycler>=0.10 in /data/homezvol1/minchiy/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in /usr/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: kiwisolver>=1.0.1 in /data/homezvol1/minchiy/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: pillow>=6.2.0 in /data/homezvol1/minchiy/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: python-dateutil>=2.1 in /usr/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)

@@ -5,21 +5,31 @@
 #SBATCH --job-name=dna_qc
 #SBATCH --output=dna_qc_%j.out
 
+module avail fastqu
 module load fastqc/0.11.9
+fastqu --help
+
+module avail trimmo
 module load java/1.8.0
 module load trimmomatic/0.39
+java -jar trimmomatic-0.39.jar --help
+java -jar /opt/apps/trimmomatic/0.39/trimmomatic-0.39.jar --help
+
+READ1="/data/class/ecoevo283/public/Bioinformatics_Course/DNAseq/ADL06_1_1.fq.gz"
+READ2="/data/class/ecoevo283/public/Bioinformatics_Course/DNAseq/ADL06_1_2.fq.gz"
+
 
 cd /pub/minchiy/ee283_work/Raw_data/DNA_Seq
 mkdir -p fastqc_results trimmed
 
 # Run on ADL06_1 pair
-fastqc -o fastqc_results ADL06_1_1.fq.gz ADL06_1_2.fq.gz
+fastqc -o fastqc_results $READ1 $READ2
 
 java -jar /opt/apps/trimmomatic/0.39/trimmomatic-0.39.jar PE \
-  ADL06_1_1.fq.gz ADL06_1_2.fq.gz \
-  trimmed/ADL06_1_1_trimmed.fq.gz trimmed/ADL06_1_1_unpaired.fq.gz \
-  trimmed/ADL06_1_2_trimmed.fq.gz trimmed/ADL06_1_2_unpaired.fq.gz \
+  $READ1 $READ2 \
+  trimmed/READ1_trimmed.fq.gz trimmed/READ1_unpaired.fq.gz \
+  trimmed/READ2_trimmed.fq.gz trimmed/READ2_unpaired.fq.gz \
   ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 \
   LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
-fastqc -o fastqc_results trimmed/ADL06_1_1_trimmed.fq.gz trimmed/ADL06_1_2_trimmed.fq.gz
+fastqc -o fastqc_results trimmed/READ1_trimmed.fq.gz trimmed/READ2_trimmed.fq.gz

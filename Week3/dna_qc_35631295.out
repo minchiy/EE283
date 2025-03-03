@@ -1,0 +1,96 @@
+/export/spool/slurm/slurmd.spool/job35631295/slurm_script: line 10: fastqu: command not found
+-------------------- /opt/rcic/Modules/modulefiles/GENOMICS --------------------
+trimmomatic/0.39  
+Error: Unable to access jarfile trimmomatic-0.39.jar
+Usage: 
+       PE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-summary <statsSummaryFile>] [-quiet] [-validatePairs] [-basein <inputBase> | <inputFile1> <inputFile2>] [-baseout <outputBase> | <outputFile1P> <outputFile1U> <outputFile2P> <outputFile2U>] <trimmer1>...
+   or: 
+       SE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-summary <statsSummaryFile>] [-quiet] <inputFile> <outputFile> <trimmer1>...
+   or: 
+       -version
+Started analysis of ADL06_1_1.fq.gz
+Approx 5% complete for ADL06_1_1.fq.gz
+Approx 10% complete for ADL06_1_1.fq.gz
+Approx 15% complete for ADL06_1_1.fq.gz
+Approx 20% complete for ADL06_1_1.fq.gz
+Approx 25% complete for ADL06_1_1.fq.gz
+Approx 30% complete for ADL06_1_1.fq.gz
+Approx 35% complete for ADL06_1_1.fq.gz
+Approx 40% complete for ADL06_1_1.fq.gz
+Approx 45% complete for ADL06_1_1.fq.gz
+Approx 50% complete for ADL06_1_1.fq.gz
+Approx 55% complete for ADL06_1_1.fq.gz
+Approx 60% complete for ADL06_1_1.fq.gz
+Approx 65% complete for ADL06_1_1.fq.gz
+Approx 70% complete for ADL06_1_1.fq.gz
+Approx 75% complete for ADL06_1_1.fq.gz
+Approx 80% complete for ADL06_1_1.fq.gz
+Approx 85% complete for ADL06_1_1.fq.gz
+Approx 90% complete for ADL06_1_1.fq.gz
+Approx 95% complete for ADL06_1_1.fq.gz
+Analysis complete for ADL06_1_1.fq.gz
+Started analysis of ADL06_1_2.fq.gz
+Approx 5% complete for ADL06_1_2.fq.gz
+Approx 10% complete for ADL06_1_2.fq.gz
+Approx 15% complete for ADL06_1_2.fq.gz
+Approx 20% complete for ADL06_1_2.fq.gz
+Approx 25% complete for ADL06_1_2.fq.gz
+Approx 30% complete for ADL06_1_2.fq.gz
+Approx 35% complete for ADL06_1_2.fq.gz
+Approx 40% complete for ADL06_1_2.fq.gz
+Approx 45% complete for ADL06_1_2.fq.gz
+Approx 50% complete for ADL06_1_2.fq.gz
+Approx 55% complete for ADL06_1_2.fq.gz
+Approx 60% complete for ADL06_1_2.fq.gz
+Approx 65% complete for ADL06_1_2.fq.gz
+Approx 70% complete for ADL06_1_2.fq.gz
+Approx 75% complete for ADL06_1_2.fq.gz
+Approx 80% complete for ADL06_1_2.fq.gz
+Approx 85% complete for ADL06_1_2.fq.gz
+Approx 90% complete for ADL06_1_2.fq.gz
+Approx 95% complete for ADL06_1_2.fq.gz
+Analysis complete for ADL06_1_2.fq.gz
+TrimmomaticPE: Started with arguments:
+ /data/class/ecoevo283/public/Bioinformatics_Course/DNAseq/ADL06_1_1.fq.gz /data/class/ecoevo283/public/Bioinformatics_Course/DNAseq/ADL06_1_2.fq.gz trimmed/READ1_trimmed.fq.gz trimmed/READ1_unpaired.fq.gz trimmed/READ2_trimmed.fq.gz trimmed/READ2_unpaired.fq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 2 threads
+java.io.FileNotFoundException: /dfs6/pub/minchiy/ee283_work/Raw_data/DNA_Seq/TruSeq3-PE.fa (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.usadellab.trimmomatic.fasta.FastaParser.parse(FastaParser.java:54)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.loadSequences(IlluminaClippingTrimmer.java:110)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.makeIlluminaClippingTrimmer(IlluminaClippingTrimmer.java:71)
+	at org.usadellab.trimmomatic.trim.TrimmerFactory.makeTrimmer(TrimmerFactory.java:32)
+	at org.usadellab.trimmomatic.Trimmomatic.createTrimmers(Trimmomatic.java:59)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:552)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
+Quality encoding detected as phred64
+Input Read Pairs: 30079427 Both Surviving: 25505578 (84.79%) Forward Only Surviving: 2449136 (8.14%) Reverse Only Surviving: 1305900 (4.34%) Dropped: 818813 (2.72%)
+TrimmomaticPE: Completed successfully
+Started analysis of READ1_trimmed.fq.gz
+Approx 5% complete for READ1_trimmed.fq.gz
+Approx 10% complete for READ1_trimmed.fq.gz
+Approx 15% complete for READ1_trimmed.fq.gz
+Approx 20% complete for READ1_trimmed.fq.gz
+Approx 25% complete for READ1_trimmed.fq.gz
+Approx 30% complete for READ1_trimmed.fq.gz
+Approx 35% complete for READ1_trimmed.fq.gz
+Approx 40% complete for READ1_trimmed.fq.gz
+Approx 45% complete for READ1_trimmed.fq.gz
+Approx 50% complete for READ1_trimmed.fq.gz
+Approx 55% complete for READ1_trimmed.fq.gz
+Failed to process file READ1_trimmed.fq.gz
+uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Midline 'bbbCTTTGCA[bb__bbbbbb\`^^```1:2:15:16329:1bCGAGAGCCTCAAGG330:16GbbbbbbabbbbbbP29:369bbbb\`^+HWUSI-EAS1562_0001:2:15:16328:bbbbbbbbbbbbbbbbbbbbbbbbbbbbb' didn't start with '+'
+	at uk.ac.babraham.FastQC.Sequence.FastQFile.readNext(FastQFile.java:172)
+	at uk.ac.babraham.FastQC.Sequence.FastQFile.next(FastQFile.java:125)
+	at uk.ac.babraham.FastQC.Analysis.AnalysisRunner.run(AnalysisRunner.java:77)
+	at java.lang.Thread.run(Thread.java:750)
+Started analysis of READ2_trimmed.fq.gz
+Approx 5% complete for READ2_trimmed.fq.gz
+Approx 10% complete for READ2_trimmed.fq.gz
+Failed to process file READ2_trimmed.fq.gz
+uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Midline 'bbbbbbbbbbbbbbbbbbbbbbbbbbaaabbbbbbbbbbbbbbbbbbbbbbbbb' didn't start with '+'
+	at uk.ac.babraham.FastQC.Sequence.FastQFile.readNext(FastQFile.java:172)
+	at uk.ac.babraham.FastQC.Sequence.FastQFile.next(FastQFile.java:125)
+	at uk.ac.babraham.FastQC.Analysis.AnalysisRunner.run(AnalysisRunner.java:77)
+	at java.lang.Thread.run(Thread.java:750)

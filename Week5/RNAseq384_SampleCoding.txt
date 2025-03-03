@@ -1,0 +1,1 @@
+/data/class/ecoevo283/public/RAWDATA/RNAseq/RNAseq384_SampleCoding.txt
